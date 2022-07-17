@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="add.component.scss">
+    <title>Home page</title>
+</head>
+<body style="font-family: 'Open Sans', sans-serif;">
+
+
+<div class="parent">
+    <div class="grid" *ngIf="!this.employeedetails.noelements">
+        <h3 class="grid-heading">CONTACTS</h3>
+        
+        <div class="grid-details" *ngFor="let c of this.employeedetails.contactlist;index as i">
+            <div class="grid-details-name" id="cname">
+                {{c.name}}
+            </div>
+            <div class="grid-details-number">
+                {{c.ph}}
+            </div>
+            <div  class="grid-details-mail">
+                {{c.mail}}
+            </div>
+
+        </div>
+
+</div>
+
+<form class="w-50 border shadow-lg" [formGroup]="registrationform">
+    <div class="row  user-form w-75">
+    <div class="form-group">
+    <label class="form-label mandatory">Name</label>
+    <input  [class.is-invalid]="registrationform.get('name')?.invalid&&registrationform.get('name')?.touched"type="text" class="form-control"  formControlName="name"   >
+    <small [class.d-none]="registrationform.get('name')?.valid||registrationform.get('name')?.untouched" class="text-danger">Username is required</small>
+    <div class="form-group pt-3">
+        <label class="form-label mandatory" >Email</label>
+        <input  [class.is-invalid]="registrationform.get('mail')?.invalid&&registrationform.get('mail')?.touched"  type="email" class="form-control" formControlName="mail" >
+        <small [class.d-none]="registrationform.get('mail')?.valid||registrationform.get('mail')?.untouched" class="text-danger">Email is required</small>
+    </div>
+    <div class="row">
+    <div class="form-group col pt-3">
+        <label class="form-label mandatory" >Mobile</label>
+        <input    [class.is-invalid]="registrationform.get('ph')?.invalid&&registrationform.get('ph')?.touched"type="tel" class="form-control" formControlName="ph">
+        <small [class.d-none]="registrationform.get('ph')?.valid||registrationform.get('ph')?.untouched" class="text-danger">Mobile number is required</small>
+    </div>
+    <div class="form-group col pt-3">
+        <label class="form-label" >Landline</label>
+        <input type="tel" class="form-control" formControlName="Landline">
+    </div>
+    </div>
+    <div class="form-group pt-3">
+        <label class="form-label" >Website</label>
+        <input type="text" class="form-control" formControlName="Website">
+    </div>
+    <div class="form-group pt-3">
+        <label class="form-label" >Address</label>
+        <textarea class="form-control" rows="4" formControlName="Address"></textarea>
+    </div>
+    <button  type="button" class="btn btn-success w-25 text-dark" (click)="adddetails()">{{this.employeedetails.buttonname}}</button>
+    <!-- <button   type="button" class="btn btn-success w-25" (click)="editdetails()">Edit</button> -->
+    
+    </div>
+    </div>
+</form>
+</div>
+</body>

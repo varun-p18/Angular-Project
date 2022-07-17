@@ -1,0 +1,15 @@
+
+form{
+    margin: auto;
+    padding: 15px 0px 0px 20px;
+    font-weight: bold;
+}
+.mandatory::after{
+    content: "*";
+    color: red;
+
+}
+button{
+    margin-left: 550px;
+    margin-top: 10px;
+}

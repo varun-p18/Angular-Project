@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="home.component.scss">
+    <title>Home page</title>
+</head>
+<body style="font-family: 'Open Sans', sans-serif;">
+    <div *ngIf="this.employeedetails.noelements" class="nocontacts">NO CONTACTS AVAILABLE</div>
+    <div class="parent" *ngIf="!this.employeedetails.noelements">
+       <div class="grid">
+        <h3 class="grid-heading">CONTACTS</h3>
+        
+        <div class="grid-details" *ngFor="let c of this.employeedetails.contactlist;index as i" (click)="showdetails(c,i)">
+            <div class="grid-details-name" id="cname">
+                {{c.name}}
+            </div>
+            <div class="grid-details-number">
+                {{c.ph}}
+            </div>
+            <div  class="grid-details-mail">
+                {{c.mail}}
+            </div>
+
+        </div>
+
+</div>
+
+    <div class="complete-details-card">
+        <div>
+        <h4 class="complete-details-header">
+            {{details.name}}
+        </h4>
+        <div class="complete-details-body">
+          <div>Email:&nbsp;{{details.mail}}</div>
+           <div style="padding-top: 8px;"> Mobile: {{details.ph}}</div>
+            <div style="padding-top: 8px;">Landline: {{details.landline}}</div>
+            <div style="padding-top: 10px;">Website:{{details.website}}</div>
+            <pre style="padding-top: 10px; font-size: 17px;font-family: 'Open Sans', sans-serif;">Address:{{details.Address}}</pre>       
+            </div>
+        </div>
+        <div style="display: flex;" class="edit">
+               <div> <img src="assets/images/edit1.jpg" height="18px"></div>
+               <div routerLink="/edit" (click)="editbutton()" style="padding-left: 3px;">EDIT</div>
+
+            </div>
+            <div style="display: flex;" class="delete">
+            <div>
+                <img src="assets/images/delete2.png" height="30px"></div>
+               <div (click)="deletebutton()">DELETE</div>
+            </div>
+            </div>
+            </div>
+    
+    </body>
+ </html>    
