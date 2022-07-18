@@ -1,0 +1,39 @@
+//grid styles are applied globally
+
+.nocontacts{
+    text-align: center;
+    font-size: 30px;
+}
+
+.complete-details-card{
+    display: flex;
+    margin-left: 100px;
+    
+}
+.edit{
+margin-left: 240px;
+font-size: 20px;
+cursor: pointer;
+}
+
+.delete{
+    padding-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.complete-details-header{
+    font-size: 25px;
+    font-weight: 900;
+    margin: 0;
+}
+.complete-details-body{
+    font-size: 17px;
+    padding-top: 10px;
+}
+
+
+
+
+
+

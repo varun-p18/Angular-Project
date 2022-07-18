@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+.complete-details-header,.nav-bar{
+    font-family: 'lato',sans-serif;
+}
+.page-header{
+    font-size: 50px;
+    color: white;
+    background-color:#3399cc;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 30px 0px 50px 22px;
+    margin-top: 0;
+}
+.nav-bar{
+    padding: 10px;
+    list-style-type: none;
+    background-color: #333333;
+    position: relative;
+    bottom: 30px;
+}
+.nav-bar-home-add{
+    color: white;
+    display: inline;
+    padding: 15px;
+    font-weight: bolder;
+}
+.nav-bar-home-add:hover{
+    background-color:#ff9a00;
+    color: black;
+}
+.nav-bar-blog-icon{
+    float: right;
+    padding-right: 22px;
+    height: 28px;
+    position: relative;
+    bottom: 4px;
+}
