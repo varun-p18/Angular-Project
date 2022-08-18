@@ -8,16 +8,19 @@
 .complete-details-card{
     display: flex;
     margin-left: 100px;
+    position: relative;
     
 }
 .edit{
-margin-left: 240px;
-font-size: 20px;
-cursor: pointer;
+    position: absolute;
+    margin-left: 500px;
+    font-size: 20px;
+    cursor: pointer;
+    
 }
-
 .delete{
-    padding-left: 10px;
+    position: absolute;
+    margin-left: 570px;
     font-size: 20px;
     cursor: pointer;
 }
@@ -31,7 +34,9 @@ cursor: pointer;
     font-size: 17px;
     padding-top: 10px;
 }
-
+.contact-color{
+    background-color: #cfe7f3;
+}
 
 
 

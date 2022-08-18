@@ -16,6 +16,10 @@ html::-webkit-scrollbar {
     padding: 30px 0px 50px 22px;
     margin-top: 0;
 }
+.span{
+    background-color: white;
+    width: 20px;
+}
 .nav-bar{
     padding: 10px;
     list-style-type: none;
@@ -39,4 +43,8 @@ html::-webkit-scrollbar {
     height: 28px;
     position: relative;
     bottom: 4px;
+}
+.active{
+    background-color: #ff9a00;
+    color: black;
 }

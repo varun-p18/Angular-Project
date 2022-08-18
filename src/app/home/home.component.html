@@ -15,7 +15,7 @@
        <div class="grid">
         <h3 class="grid-heading">CONTACTS</h3>
         
-        <div class="grid-details" *ngFor="let c of this.employeedetails.contactlist;index as i" (click)="showdetails(c,i)">
+        <div class="grid-details" *ngFor="let c of this.employeedetails.contactlist;index as i" (click)="l=true" (click)="showdetails(c,i)" [ngClass]="{'contact-color': l==this.employeedetails.contactlist[i]}">
             <div class="grid-details-name" id="cname">
                 {{c.name}}
             </div>

@@ -9,8 +9,9 @@
 <body style="font-family: 'Open Sans', sans-serif;">
     <h1 class="page-header">Fosterate</h1>
     <ul class="nav-bar">
-        <li class="nav-bar-home-add" routerLink="/home" >HOME</li>
-        <li class="nav-bar-home-add" routerLink="/add">+ADD</li>
+        
+        <li class="nav-bar-home-add" routerLink="/" [ngClass]="{'active':x}" (click)="home()">HOME</li>
+        <li class="nav-bar-home-add" routerLink="/add" (click)="add()" [ngClass]="{'active':y}">+ADD</li>
         <img class="nav-bar-blog-icon" src="assets/images/blog-icon.png" alt="">
     </ul>
 </body>

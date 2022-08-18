@@ -39,7 +39,7 @@ idx=0
       alert("Name,Email,Mobile fields are mandatory")
     }
     else{
-    if(this.employeedetails.buttonname=='edit'){
+    if(this.employeedetails.buttonname=='Edit'){
     this.employeedetails.contactlist[this.idx]={...this.registrationform.value}
     alert("Contact edited successfully")
     }
@@ -52,7 +52,7 @@ idx=0
   }
   edit(i:number){
     this.idx=this.employeedetails.index
-    if(this.employeedetails.buttonname=='edit'){
+    if(this.employeedetails.buttonname=='Edit'){
     this.registrationform=this.fb.group({
       name:[this.employeedetails.contactlist[i].name,Validators.required],
       mail:[this.employeedetails.contactlist[i].mail,Validators.required],

@@ -6,4 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  x=true
+  y=false
+  home(){
+    this.x=true
+    this.y=false
+  }
+  add(){
+    this.x=false
+    this.y=true
+  }
 }

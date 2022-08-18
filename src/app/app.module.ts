@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component'
 import { EmployeesService } from './employees.service';
 import { ReactiveFormsModule ,FormsModule} from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
     AddComponent,
-    HomeComponent
+    HomeComponent,
+
 
   ],
   imports: [
