@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeesService } from '../employees.service';
 import { FormsModule } from '@angular/forms';
 import { FormBuilder,Validators } from '@angular/forms';
-
+import { AppComponent } from '../app.component';
+import{ Router } from '@angular/router'
 @Component({
   selector: 'app-add',
   templateUrl: './add.component.html',
   styleUrls: ['./add.component.scss']
 })
 export class AddComponent implements OnInit {
-  constructor(public employeedetails:EmployeesService) { 
+  constructor(public employeedetails:EmployeesService,public appcomp:AppComponent, public r:Router) { 
     
 
 }
@@ -32,21 +33,29 @@ idx=0
 
   ngOnInit() {
     this.edit(this.employeedetails.index)
+    
 
   }
   adddetails(){
-    if(this.registrationform.value.name==""||this.registrationform.value.mail==""||this.registrationform.value.ph==""){
-      alert("Name,Email,Mobile fields are mandatory")
+    if(this.registrationform.value.name===""||this.registrationform.value.mail=== ""||this.registrationform.value.ph=== ""){
+      console.log("REQUIRED FIELDS SHOULD BE FILLED")
+     
     }
     else{
     if(this.employeedetails.buttonname=='Edit'){
     this.employeedetails.contactlist[this.idx]={...this.registrationform.value}
-    alert("Contact edited successfully")
+    
+    this.appcomp.x=true
+    this.appcomp.y=false
+    this.r.navigate(['/'])
     }
     else{
       this.employeedetails.contactlist.push(this.registrationform.value)
       this.employeedetails.noelements=false
-      alert("Contact added successfully")
+      this.employeedetails.index=this.employeedetails.contactlist.length-1
+      this.appcomp.x=true
+      this.appcomp.y=false
+      this.r.navigate(['/'])
     }
   }
   }

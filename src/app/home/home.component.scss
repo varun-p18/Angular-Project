@@ -1,5 +1,10 @@
 //grid styles are applied globally
-
+@mixin edit-delete($position,$margin-left,$font-size,$cursor) {
+    position: $position;
+    margin-left: $margin-left;
+    font-size: $font-size;
+    cursor: $cursor;
+}
 .nocontacts{
     text-align: center;
     font-size: 30px;
@@ -9,31 +14,28 @@
     display: flex;
     margin-left: 100px;
     position: relative;
+    .complete-details-header{
+        font-size: 25px;
+        font-weight: 900;
+        margin: 0;
+    }
+    .complete-details-body{
+        font-size: 17px;
+        padding-top: 10px;
+    }
+    .edit{
     
-}
-.edit{
-    position: absolute;
-    margin-left: 500px;
-    font-size: 20px;
-    cursor: pointer;
+        @include edit-delete(absolute,500px,19px,pointer)
+    }
+    .delete{
+       
+        @include edit-delete(absolute,575px,19px,pointer)
+    }
     
-}
-.delete{
-    position: absolute;
-    margin-left: 570px;
-    font-size: 20px;
-    cursor: pointer;
 }
 
-.complete-details-header{
-    font-size: 25px;
-    font-weight: 900;
-    margin: 0;
-}
-.complete-details-body{
-    font-size: 17px;
-    padding-top: 10px;
-}
+
+
 .contact-color{
     background-color: #cfe7f3;
 }

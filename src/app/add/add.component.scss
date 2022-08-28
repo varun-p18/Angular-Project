@@ -1,16 +1,19 @@
 
 form{
-    margin: auto;
-    padding: 15px 0px 0px 20px;
+    padding: 25px 0px 0px 20px;
     font-weight: bold;
+    height: 150%;
+    margin-left: 40px;
+    position: relative;
+    top: -20px;
+    .mandatory::after{
+        content: "*";
+        color: red;
+    
+    }
+    button{
+        
+        margin: 10px 0px 10px 540px;
+    }
 }
-.mandatory::after{
-    content: "*";
-    color: red;
 
-}
-button{
-    margin-left: 550px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}

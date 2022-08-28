@@ -1,37 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+$padding_left:10px;
+
 .parent{
     display: flex;
+    .grid{
+        padding-left: 20px;
+        position: relative;
+        bottom: 30px;
+           .grid-heading{
+               font-size: 17px;
+               font-weight: bolder;
+               margin-top: 5px;
+               padding-bottom: 10px;
+           }
+           .grid-details{
+               border: 1px solid #dcdcdc;
+               width: 325px;
+               height: 105px;
+               padding: 10px 0px 0px 15px;
+               cursor: pointer;
+               .grid-details-name{
+                   font-size: 20px;
+                   padding-left: $padding_left;
+                   font-weight: 300;
+               }
+               .grid-details-mail{
+                   font-size: 17px;
+                   padding-left:$padding_left;
+               }
+               .grid-details-number{
+                   font-size: 18px;
+                   padding-left:$padding_left;
+               }
+               
+           
+           }
+           
+       }
 }
-.grid{
- padding-left: 20px;
- position: relative;
- bottom: 30px;
-}
-.grid-heading{
-    font-size: 17px;
-    font-weight: bolder;
-    margin-top: 5px;
-    padding-bottom: 10px;
-}
-.grid-details{
-    border: 1px solid #dcdcdc;
-    width: 325px;
-    height: 105px;
-    padding: 10px 0px 0px 15px;
-}
-.grid-details:hover{
-    background-color:#cfe7f3;
-}
-.grid-details-name{
-    font-size: 20px;
-    padding-left: 10px;
-    font-weight: 300;
-}
-.grid-details-mail{
-    font-size: 17px;
-    padding-left:10px;
-}
-.grid-details-number{
-    font-size: 18px;
-    padding-left:10px;
-}
+
+
